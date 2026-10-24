@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Jiro Cubing</title>
+</head>
+<body>
+    <div id="root"></div>
+
+
+
+    <script type="text/babel"> //Ini sudah diubah ya type scriptnya menjadi compilernya js memakai babel
+        const container = document.getElementById('root');
+        const root = ReactDOM.createRoot(container);
+        root.render(
+            < > {/* ini Pembungkus untuk menjadikan beberapa element menjadi 1 element */}
+            <h1> Belajar React </h1>
+            <p> Ini bagian paragraf </p>
+            </ > //ini penutup dari bungkusan awalnya
+        ); //Ini ga akan kerender karena javascript tidak mengenal h1, Tetapi sintaks dari html JSX, tetapi web tidak mengenali apa itu jsx, kita butuh compiler agar web mengerti jsx
+    </script>
+    
+</body>
+</html>

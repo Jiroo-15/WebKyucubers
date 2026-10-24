@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+img{
+    object-fit: cover;
+}
+
+body{
+    background-color: #f1f1f1;
+}
+
+nav{
+    padding: 0 80px;
+    position: relative; /* Wajib ada agar z-index berfungsi */
+    z-index: 100; /* Menempatkan nav di atas elemen lain */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+
+nav a.logo{
+    font-size: 33px;
+    color: red;
+    font-weight: 600;
+}
+
+nav .links a:not(:last-child){
+    margin-right: 20px;
+}
+
+nav .login button{
+    padding: 8px 14px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+nav .login button.signup{
+    background-color: #000;
+    color: #fff;
+    border-radius: 4px;
+    margin-right: 14px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+header{
+    padding: 0 80px;
+    height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .left{
+    width: 700px;
+}
+
+header .left h1{
+    font-size: 80px;
+}
+
+header .left h1 span{
+    color: red;
+}
+
+header .left p{
+    margin: 40px 0;
+    line-height: 1.65;
+    font-size: 15px;
+    color: #202122;
+}
+
+header .left a{
+    display: flex;
+    align-items: center;
+    background: #000;
+    width: 200px;
+    padding: 8px;
+    border-radius: 60px;
+}
+
+header .left a i{
+    background-color: #fff;
+    font-size: 24px;
+    border-radius: 50%;
+    padding: 8px;
+}
+
+header .left a span{
+    color: #fff;
+    margin-left: 10px;
+}
+
+header img{
+    width: 500px;
+}
+
+h2.separator{
+    padding: 0 80px;
+    font-size: 40px;
+    margin-top: 40px;
+}
+
+.part-cube{
+    padding: 0 80px;
+    margin: 50px 0 80px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.part-cube .item,
+.bagian-gambar .metode .item{
+    padding: 20px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.part-cube .item:hover,
+.bagian-gambar .metode .item:hover,
+.sellers .item:hover{
+    box-shadow: none;
+}
+
+.part-cube .item .header{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.part-cube .item .header i{
+    font-size: 40px;
+}
+
+.part-cube .item .header h5{
+    font-size: 17px;
+}
+
+.part-cube .item p{
+    margin-top: 10px;
+    padding: 0 4px;
+}
+
+.bagian-gambar{
+    padding: 0 80px;
+    margin-top: 30px;
+}
+
+.bagian-gambar .kategori{
+    display: flex;
+    gap: 14px;
+}
+
+.bagian-gambar .kategori a{
+    background-color: #dfdcdc;
+    padding: 8px 14px;
+    font-size: 15px;
+    border-radius: 14px;
+    transition: all 0.3s ease;
+}
+
+.bagian-gambar .kategori a:hover{
+    color: #fff;
+    background-color: #0f2182;
+}
+
+.bagian-gambar .metode{
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+image .item{
+    width:1px ;
+}
+
+.bagian-gambar .metode .item img{
+    width: 250px;
+    height: 280px;
+    border-radius: 18px;
+}
+
+.bagian-gambar .metode .item .info{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #edecec;
+}
+
+.bagian-gambar .metode .item .info h5{
+    font-size: 18px;
+}
+
+.bagian-gambar .metode .item .info .btc{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.bagian-gambar .metode .item .btc i{
+    font-size: 22px;
+    color: #304ffe;
+}
+
+.bagian-gambar .metode .item .btc p{
+    font-size: 12px;
+    color: #304ffe;
+}
+
+.bagian-gambar .metode .item .info > p{
+    font-size: 12px;
+    color: #989898;
+}
+
+.bagian-gambar .metode .item .bid{
+    padding: 14px 0 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bagian-gambar .metode .item .bid p,
+.bagian-gambar .metode .item .bid a{
+    background-color: #edecec;
+    padding: 6px 10px;
+    font-size: 13px;
+    border-radius: 10px;
+}
+
+.bagian-gambar .metode .item .bid a{
+    color: #304ffe;
+    background: transparent;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.bagian-gambar .metode .item .bid a:hover{
+    color: #fff;
+    background-color: #000;
+}

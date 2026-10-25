@@ -30,6 +30,29 @@ nav{
     height: 80px;
 }
 
+nav .links a {
+    position: relative;
+    padding-bottom: 4px; /* Memberi sedikit jarak antara teks dan garis */
+    transition: color 0.3s ease;
+}
+
+/* Membuat garis hitam di bawah teks (kondisi awal: lebar 0 / tersembunyi) */
+nav .links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px; /* Ketebalan garis (sesuaikan jika mau lebih tipis/tebal) */
+    background-color: #000000; /* Warna bar hitam */
+    transition: width 0.3s ease; /* Animasi garis memanjang yang halus */
+}
+
+/* Efek saat kursor menyentuh link (hover) */
+nav .links a:hover::after {
+    width: 100%; /* Garis muncul penuh selebar teks */
+}
+
 nav a.logo{
     font-size: 33px;
     color: red;
@@ -254,4 +277,304 @@ image .item{
 .bagian-gambar .metode .item .bid a:hover{
     color: #fff;
     background-color: #000;
+}
+
+footer{
+    background-color: #000;
+    color: #fff;
+    padding: 100px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer h3{
+    font-size: 48px;
+}
+
+footer .right{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 26px;
+}
+
+footer .right .links{
+    display: flex;
+    gap: 30px;
+}
+
+footer .right .links a{
+    color: #989898;
+    transition: color 0.3s ease;
+}
+
+footer .right .links a:hover{
+    color: #fff;
+}
+
+footer .right .social{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+footer .right .social i{
+    font-size: 30px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+footer .right .social i:hover{
+    color: #304ffe;
+}
+
+footer .right p{
+    font-size: 13px;
+    color: #777;
+}
+
+@media screen and (max-width: 1400px) {
+    
+    nav,
+    header,
+    h2.separator,
+    .part-cube,
+    .bagian-gambar,
+    .sellers{
+        padding: 0 40px;
+    }
+
+    header .left h1{
+        font-size: 60px;
+    }
+
+    header img{
+        width: 540px;
+    }
+
+    .bagian-gambar .metode .item img{
+        width: 220px;
+        height: 220px;
+    }
+
+    footer{
+        padding: 100px 40px;
+    }
+
+    footer h3{
+        font-size: 38px;
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+    
+    header .left h1{
+        font-size: 48px;
+    }
+
+    header img{
+        width: 480px;
+    }
+
+    h2.separator{
+        font-size: 34px;
+    }
+
+    .part-cube .item .header i{
+        font-size: 36px;
+    }
+
+    .part-cube .item .header h5{
+        font-size: 15px;
+    }
+
+    .part-cube .item p{
+        font-size: 13px;
+    }
+
+    .bagian-gambar .metode{
+        flex-wrap: wrap;
+        row-gap: 30px;
+    }
+
+    .bagian-gambar .metode .item{
+        width: 48%;
+    }
+
+    .bagian-gambar .metode .item img{
+        width: 100%;
+        height: auto;
+    }
+
+    .sellers{
+        flex-wrap: wrap;
+    }
+
+    .sellers .item{
+        width: 48%;
+    }
+
+    footer .links a{
+        font-size: 15px;
+    }
+
+}
+
+@media screen and (max-width: 992px) {
+    
+    nav a.logo{
+        font-size: 28px;
+    }
+
+    nav .links a{
+        font-size: 14px;
+    }
+
+    header{
+        flex-direction: column-reverse;
+        height: auto;
+        margin-bottom: 60px;
+    }
+
+    header .left{
+        width: 100%;
+    }
+
+    header img{
+        width: 100%;
+    }
+
+    .part-cube{
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .part-cube .item{
+        width: 48%;
+    }
+
+    .sellers{
+        gap: 20px;
+    }
+
+    footer{
+        flex-direction: column;
+        padding: 60px 40px;
+    }
+
+    footer h3{
+        margin-bottom: 40px;
+        font-size: 32px;
+    }
+
+    footer .right{
+        width: 100%;
+        align-items: center;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    nav {
+        padding: 15px 20px;
+        height: auto; /* Membiarkan tinggi nav menyesuaikan isinya */
+        flex-direction: column; /* Mengubah alur utama dari atas ke bawah */
+        align-items: center; /* Ratakan semua elemen di tengah */
+        gap: 12px; /* Jarak antar bagian (Logo -> Links -> Buttons) */
+    }
+    
+    header,
+    h2.separator,
+    .part-cube,
+    .bagian-gambar,
+    .pembeli /* kalau ada pembeli*/{
+        padding: 0 20px;
+    }
+
+    nav a.logo{
+        font-size: 22px;
+    }
+
+    nav a.logo i{
+        font-size: 20px;
+    }
+
+    nav .links{
+        display: flex;
+        justify-content: center;
+        flex: wrap;
+        gap: 12px;
+    }
+
+    nav .links a{
+        font-size: 12px;
+        margin-right: 0;
+    }
+
+    nav .login{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    nav .login button,
+    nav .login a{
+        font-size: 12px;
+        padding: 6px 16px;
+        width: 100%; /* Membuat tombol selebar container supaya tampilannya simetris */
+        max-width: 200px;
+        text-align: center;
+    } 
+
+    header .left h1{
+        font-size: 36px;
+    }
+
+    header .left p{
+        font-size: 14px;
+    }
+
+    header .left a{
+        padding: 6px;
+        width: 160px;
+        font-size: 14px;
+    }
+
+    header .left a i{
+        padding: 6px;
+    }
+
+    h2.separator{
+        font-size: 30px;
+    }
+
+    footer{
+        padding: 40px 20px;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+    
+    header .left h1{
+        font-size: 30px;
+    }
+
+    .part-cube .item{
+        width: 100%;
+    }
+
+    .bagian-gambar .metode .item,
+    .sellers .item{
+        width: 47%;
+    }
+
+    .bagian-gambar .kategori a{
+        font-size: 13px;
+    }
+
 }

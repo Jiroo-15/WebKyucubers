@@ -480,7 +480,7 @@ footer .right p{
 @media screen and (max-width: 768px) {
 
     nav {
-        padding: 15px 20px;
+        padding: 0px 20px;
         height: auto; /* Membiarkan tinggi nav menyesuaikan isinya */
         flex-direction: column; /* Mengubah alur utama dari atas ke bawah */
         align-items: center; /* Ratakan semua elemen di tengah */

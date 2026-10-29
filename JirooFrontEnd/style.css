@@ -107,6 +107,7 @@ header .left p{
 
 header .left a{
     display: flex;
+    margin-top: 20px;
     align-items: center;
     background: #000;
     width: 200px;
@@ -499,30 +500,12 @@ footer .right p{
         font-size: 22px;
     }
 
-    nav a.logo i{
-        font-size: 20px;
-    }
-
-    nav .links{
-        display: flex;
-        justify-content: center;
-        flex: wrap;
-        gap: 12px;
-    }
-
     nav .links a{
         font-size: 12px;
         margin-right: 0;
     }
 
-    nav .login{
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    nav .login button,
-    nav .login a{
+    nav .login button{
         font-size: 12px;
         padding: 6px 16px;
         width: 100%; /* Membuat tombol selebar container supaya tampilannya simetris */
